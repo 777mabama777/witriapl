@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczanie Odległości</title>
+</head>
+<body>
+    <script>
+        function calculateDistance() {
+            do {
+                
+                let x1 = parseFloat(prompt("Podaj współrzędną x pierwszego punktu:"));
+                let y1 = parseFloat(prompt("Podaj współrzędną y pierwszego punktu:"));
+
+               
+                let x2 = parseFloat(prompt("Podaj współrzędną x drugiego punktu:"));
+                let y2 = parseFloat(prompt("Podaj współrzędną y drugiego punktu:"));
+
+               
+                let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+                
+                distance = Math.round(distance * 100) / 100; // zaokrąglenie do 2 miejsc po przecinku
+
+                
+                alert(`Odległość między punktami wynosi: ${distance}`);
+
+            } while (confirm("Czy chcesz obliczyć odległość dla innych punktów?"));
+        }
+
+       
+        calculateDistance();
+    </script>
+</body>
+</html>
